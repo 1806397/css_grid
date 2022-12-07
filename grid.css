@@ -1,0 +1,68 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    /* grid-template-columns: repeat(12, 1fr); */
+    /* with min-content grid will be large enough to hold it's content */
+    /* grid-template-rows: min-content auto min-content;  */
+    /* display: grid;
+    grid: repeat(6, 1fr)/repeat(12, 1fr);
+    gap: 1em;
+    margin: 1em; */
+    display: grid;
+    /* With auto-flow more rows will be created automatically */
+    grid: auto-flow min-content/repeat(12, 1fr);
+    grid-gap: 1em;
+    margin: 1em;
+
+}
+
+header {
+    /* place item in grid horizontally */
+    justify-items: start;
+    /* place item in grid vertically */
+    align-items: start;
+
+}
+
+header,
+footer {
+    grid-column: 1/13;
+}
+
+aside,
+nav {
+    grid-column: 1/5;
+
+}
+
+main {
+    grid-column: 5/13;
+    grid-row: 2/4;
+    /* rowstart/columnstart/rowend/columnend */
+    /* grid-area: 2/5/4/13; */
+    /* justify-content: center;
+    align-content: center; */
+}
+
+#pie1,
+#pie5 {
+    grid-column: 1/4;
+}
+
+#pie2,
+#pie6 {
+    grid-column: 4/7;
+}
+
+#pie3,
+#pie7 {
+    grid-column: 7/10;
+}
+
+#pie4,
+#pie8 {
+    grid-column: 10/13;
+}
